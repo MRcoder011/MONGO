@@ -19,7 +19,13 @@ const userSchema = new mongoose.Schema({
 // collection name is users
 // collection name and model name should be same
 const User  = mongoose.model("User", userSchema);
-User.insertMany([
+User.find({age : {$gt : 24}}).then((res) => {
+    console.log(res);
+    
+}).catch((error) => {
+    console.log(error);
+});
+/*User.insertMany([
     {name : "shafat", email : "123@gmail.com" , age : 24 },
     {name : "seenu", email : "1234@gmail.com" , age : 25 },
     {name : "shaffu", email : "12@gmail.comn" , age : 26 },
@@ -27,7 +33,7 @@ User.insertMany([
     console.log(res);
 }).catch((error) => {
     console.log(error);
-});
+});*/
 /*const user2 = new User({
     name : "shafat",
     email : "mdshafat@gmail.com",
