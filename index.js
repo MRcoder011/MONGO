@@ -19,12 +19,22 @@ const userSchema = new mongoose.Schema({
 // collection name is users
 // collection name and model name should be same
 const User  = mongoose.model("User", userSchema);
-User.find({age : {$gt : 24}}).then((res) => {
+User.findByIdAndDelete("67d696a6dbb7f6fe58fd1e1b").then((res) => {
     console.log(res);
-    
 }).catch((error) => {
     console.log(error);
 });
+User.deleteOne({name : "John"}).then((res) => {
+    console.log(res);
+}).catch((error) => {
+    console.log(error);
+});
+/*User.findById("67d69a2f83198baa6e9ab7cb").then((res) => {
+    console.log(res[0]);
+    
+}).catch((error) => {
+    console.log(error);
+});*/
 /*User.insertMany([
     {name : "shafat", email : "123@gmail.com" , age : 24 },
     {name : "seenu", email : "1234@gmail.com" , age : 25 },
