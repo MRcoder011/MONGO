@@ -64,7 +64,7 @@ async function insertBooks() {
     });
 
     const savedBooks = await Book.insertMany([book1, book2]);
-    console.log("Books inserted:" savedBooks);
+    console.log("Books inserted:", savedBooks);
   } catch (error) {
     console.error("Error inserting books:", error);
   }
