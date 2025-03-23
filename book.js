@@ -68,7 +68,7 @@ async function insertBooks() {
   } catch (error) {
     console.error("Error inserting books:", error);
   }
-}
+};
 
 // Call function to insert books
 insertBooks();
