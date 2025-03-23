@@ -50,7 +50,7 @@ async function insertBooks() {
     const book1 = new Book({
       title: "The Alchemist",
       author: "Paulo Coelho",
-      price: 200,
+      price: 200, 
       category: "fiction",
       discount: 10,
     });
@@ -64,7 +64,7 @@ async function insertBooks() {
     });
 
     const savedBooks = await Book.insertMany([book1, book2]);
-    console.log("Books inserted:", savedBooks);
+    console.log("Books inserted:" savedBooks);
   } catch (error) {
     console.error("Error inserting books:", error);
   }
